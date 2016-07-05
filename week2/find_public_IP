@@ -1,0 +1,4 @@
+To find the public IP of an instance, you need to go to the EC2 Dashboard and 
+click on running instances.  Then in the window that shows the names of the 
+running instances, you can scroll over until you see the heading that says
+"Public IP".  There the information you need will be displayed. 
