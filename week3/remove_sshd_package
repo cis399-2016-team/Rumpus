@@ -1,0 +1,24 @@
+Script started on Fri 15 Jul 2016 01:54:54 AM UTC
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# apt-get remove openssh-server
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 3%Reading state information... Done
+The following packages will be REMOVED:
+  openssh-server
+0 upgraded, 0 newly installed, 1 to remove and 88 not upgraded.
+After this operation, 955 kB disk space will be freed.
+Do you want to continue? [Y/n] y
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 54706 files and directories currently installed.)
+Removing openssh-server (1:6.6p1-2ubuntu2.7) ...
+ssh stop/waiting
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# puppet agent -t
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Caching catalog for ip-10-0-7-76.us-west-2.compute.internal[0m
+[0;32mInfo: Applying configuration version '1468537170'[0m
+[mNotice: /Stage[main]/Sshd/Package[openssh-server]/ensure: created[0m
+[mNotice: Finished catalog run in 1.35 seconds[0m
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# exit
+exit
+
+Script done on Fri 15 Jul 2016 01:56:37 AM UTC

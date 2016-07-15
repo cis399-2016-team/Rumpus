@@ -1,0 +1,16 @@
+Script started on Fri 15 Jul 2016 02:00:12 AM UTC
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# rm /etc/ss
+ssh/ ssl/ 
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# rm /etc/ssh/sshd_config 
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# puppet agent -t
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Caching catalog for ip-10-0-7-76.us-west-2.compute.internal[0m
+[0;32mInfo: Applying configuration version '1468537170'[0m
+[mNotice: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]/ensure: defined content as '{md5}dbe6c4ccee3d6364b7cfaf47c0fbfeba'[0m
+[0;32mInfo: /Stage[main]/Sshd/File[/etc/ssh/sshd_config]: Scheduling refresh of Service[ssh][0m
+[mNotice: /Stage[main]/Sshd/Service[ssh]: Triggered 'refresh' from 1 events[0m
+[mNotice: Finished catalog run in 0.20 seconds[0m
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# exit
+exit
+
+Script done on Fri 15 Jul 2016 02:00:46 AM UTC

@@ -1,0 +1,14 @@
+Script started on Fri 15 Jul 2016 01:58:38 AM UTC
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# stop ssh
+ssh stop/waiting
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# puppte[K[Ker[Kt agent -t
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Caching catalog for ip-10-0-7-76.us-west-2.compute.internal[0m
+[0;32mInfo: Applying configuration version '1468537170'[0m
+[mNotice: /Stage[main]/Sshd/Service[ssh]/ensure: ensure changed 'stopped' to 'running'[0m
+[0;32mInfo: /Stage[main]/Sshd/Service[ssh]: Unscheduling refresh on Service[ssh][0m
+[mNotice: Finished catalog run in 0.11 seconds[0m
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# exit
+exit
+
+Script done on Fri 15 Jul 2016 01:58:58 AM UTC

@@ -1,0 +1,13 @@
+Script started on Fri 15 Jul 2016 02:02:57 AM UTC
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# rm ~ubuntu/ssh[K[K[K.ssh/authorized_keys 
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# puppet agent -t
+[0;32mInfo: Retrieving plugin[0m
+[0;32mInfo: Caching catalog for ip-10-0-7-76.us-west-2.compute.internal[0m
+[0;32mInfo: Applying configuration version '1468537170'[0m
+[mNotice: /Stage[main]/Sshd/Ssh_authorized_key[ACG-key-pair]/ensure: created[0m
+[mNotice: /Stage[main]/Sshd/Ssh_authorized_key[pasha-key-pair-oregon]/ensure: created[0m
+[mNotice: Finished catalog run in 0.09 seconds[0m
+]0;root@ip-10-0-7-76: ~/Rumpus/week3root@ip-10-0-7-76:~/Rumpus/week3# exit
+exit
+
+Script done on Fri 15 Jul 2016 02:03:35 AM UTC
