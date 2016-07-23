@@ -1,0 +1,7 @@
+Here is the puppet code I used to replicate content:
+
+file{ "/var/www/html":
+		source => ["puppet:///modules/apache/html"],
+		mode => 644,
+		recurse => true,
+}

@@ -1,0 +1,8 @@
+Here is a snippet of the log file in /var/log/apache2/access.log:
+
+10.0.7.6 - - [22/Jul/2016:22:00:40 +0000] "GET / HTTP/1.1" 200 11820 "-" "ELB-HealthChecker/1.0"
+10.0.7.186 - - [22/Jul/2016:22:00:46 +0000] "GET / HTTP/1.1" 200 11820 "-" "ELB-HealthChecker/1.0"
+10.0.7.6 - - [22/Jul/2016:22:01:10 +0000] "GET / HTTP/1.1" 200 11820 "-" "ELB-HealthChecker/1.0"
+10.0.7.6 - - [22/Jul/2016:22:01:13 +0000] "GET /icons/ubuntu-logo.png HTTP/1.1" 200 3689 "http://teamrumpuslb-1713804385.us-west-2.elb.amazonaws.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0"
+10.0.7.6 - - [22/Jul/2016:22:01:15 +0000] "GET /favicon.ico HTTP/1.1" 404 540 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0"
+10.0.7.186 - - [22/Jul/2016:22:01:16 +0000] "GET / HTTP/1.1" 200 11820 "-" "ELB-HealthChecker/1.0"

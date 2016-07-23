@@ -1,0 +1,1 @@
+I can still access both webpages when shutting down apache on just one of either instance, but cannot access either webpage when both are shut down at the same time.
