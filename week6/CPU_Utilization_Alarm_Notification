@@ -1,0 +1,23 @@
+Alarm Details:
+- Name:                       Andrew-Instance-CPU-Utilization
+- Description:                Created from EC2 Console
+- State Change:               OK -> ALARM
+- Reason for State Change:    Threshold Crossed: 1 datapoint (0.966) was greater than or equal to the threshold (0.6).
+- Timestamp:                  Monday 01 August, 2016 10:55:38 UTC
+- AWS Account:                006170570170
+
+Threshold:
+- The alarm is in the ALARM state when the metric is GreaterThanOrEqualToThreshold 0.6 for 300 seconds.
+
+Monitored Metric:
+- MetricNamespace:            AWS/EC2
+- MetricName:                 CPUUtilization
+- Dimensions:                 [InstanceId = i-2b8418f6]
+- Period:                     300 seconds
+- Statistic:                  Average
+- Unit:                       not specified
+
+State Change Actions:
+- OK:
+- ALARM: [arn:aws:sns:us-west-2:006170570170:TeamRumpusAlarms]
+- INSUFFICIENT_DATA: 
