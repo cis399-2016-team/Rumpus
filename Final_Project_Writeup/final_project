@@ -1,0 +1,65 @@
+1) Our goals for the project were to create an email server that could send and
+receive mail, allowing the users of our system to exchange information with 
+other users and other email accounts.  Methods of testing were making sure the
+puppet modules were properly written and working, as well as repeatedly trying 
+to send and receive emails from within accounts on the instance, as well as to 
+and from accounts outside the instance.
+
+2)Email is a constant part of everyday life, especially professional life. 
+Because of this, it’s used constantly and deeply used by computer illiterate 
+people. Therefore it needs to have a lot of functionality in a very user 
+friendly interface. Unfortunately, we had an issue where the “mail” function 
+required the user to input their return address every time, which reduced user 
+friendliness. Fixing the default so that users don’t accidentally input the 
+wrong return address seems like the first major support issue we’d run into. To
+make this a service fit for the 21st century, we’d have to upgrade the MUA from
+the default mail program that runs in command prompt and use an external program
+like Thunderbird or Evolution.
+
+3) The major security issue with email is spam. Postfix doesn’t use open relays
+and instead has a default limit for use that limits the potential for users to 
+abuse our system to send spam to our users. Unfortunately, as of yet we don’t 
+have a spam filter to protect our users from outside influences. With Postfix, 
+we can manually disconnect other SMTP clients that are sending us spam by using
+SMTP reply codes, mostly used if a spammer is sending an amount of mail that’s 
+causing stress on our servers. Fortunately, Postfix automatically adapts to 
+extreme server usage, which can help keep some legitimate mail flowing during a
+temporary overload, generally of malicious origins. This service is called 
+postscreen and is pretty good at identifying and blocking so called “zombies” 
+(often botnets or malware on end-user computers).
+
+4) We used Postfix as our Mail Transfer Agent and dovecot as an IMAP server. 
+Postfix is probably the most common MTA after Sendmail and is widely used acrossthe web. Postfix is easily compatible with both the software that’s already 
+installed on our instances and many of the upgrades to our system that would be
+the next step like Thunderbird or SpamAssassin. We use the default program 
+“mail” as the user interface and together, these programs let users send and 
+receive mail, both from within the confines of our system and from other email 
+servers like GMail or Yahoo.  We would also need to maintain disk space by 
+limiting the amount of emails a user can hold at any given time.  We would send
+out a warning when they are within 10-15 percent of their limit of some number 
+of space, around 500MB for instance.  When they reach the limit, we would have 
+to either suspend their email privileges until they get back within the 
+threshold, or automatically delete the oldest ones. 
+
+6)The project was implemented using puppet modules for both Postfix and Dovecot,
+with Postfix updating itself anytime changes are made to its main.cf file.  
+Changes were made to the main.cf by changing the myhostname, myorigin, and 
+mydestination to the public IP address of the instance 
+(ec2-52-42-83-189.us-west-2.compute.amazonaws.com).  This enables the emails to
+be able to go to destinations and replies to get sent and recognized.  Previously, 
+when it was using the private IP, and emails could succesfully be sent from the 
+account, but an email sent to the account would fail to deliver, since records of 
+the IP could not be found.  For users to be able to use their email accounts from 
+the instance, it’s as simple as logging into their account.  Their email address 
+will be “username@ec2-52-42-83-189.us-west-2.compute.amazonaws.com”  To be able to 
+send mail from the command line, I found the best way to do it is to use the 
+default sendmail, which uses the changes made to postfix’s config file.  To send the
+mail, you use these commands:
+sendmail  name@destination.com
+Subject: enter subject line here
+Body of email is entered here
+And when you are done typing, you send by pressing Ctrl+Shift+d.
+If a user has mail to be checked, they will be alerted about it through the terminal
+when they log in or when they receive the mail.  They can check their mail simply bytyping “mail” in the terminal.  It will show them what messages they have received.
+They can also access their mail in one long log file by going to /var/mail/ and looking at the file using their username.
+
