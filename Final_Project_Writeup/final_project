@@ -29,7 +29,8 @@ postscreen and is pretty good at identifying and blocking so called “zombies�
 (often botnets or malware on end-user computers).
 
 4) We used Postfix as our Mail Transfer Agent and dovecot as an IMAP server. 
-Postfix is probably the most common MTA after Sendmail and is widely used acrossthe web. Postfix is easily compatible with both the software that’s already 
+Postfix is probably the most common MTA after Sendmail and is widely used across
+the web. Postfix is easily compatible with both the software that’s already 
 installed on our instances and many of the upgrades to our system that would be
 the next step like Thunderbird or SpamAssassin. We use the default program 
 “mail” as the user interface and together, these programs let users send and 
