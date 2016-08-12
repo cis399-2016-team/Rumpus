@@ -60,7 +60,10 @@ sendmail  name@destination.com
 Subject: enter subject line here
 Body of email is entered here
 And when you are done typing, you send by pressing Ctrl+Shift+d.
-If a user has mail to be checked, they will be alerted about it through the terminal
-when they log in or when they receive the mail.  They can check their mail simply bytyping “mail” in the terminal.  It will show them what messages they have received.
-They can also access their mail in one long log file by going to /var/mail/ and looking at the file using their username.
+If a user has mail to be checked, they will be alerted about it through the 
+terminal when they log in or when they receive the mail.  They can check their 
+mail simply bytyping “mail” in the terminal.  It will show them what messages 
+they have received.
+They can also access their mail in one long log file by going to /var/mail/ and 
+looking at the file using their username.
 
